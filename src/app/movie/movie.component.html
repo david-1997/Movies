@@ -1,0 +1,16 @@
+<div class="container my-4">
+    <div class="row">
+      <div class="col-lg-9">
+        <div *ngFor="let movie of movieData">
+          <div *ngIf="movie._id == id" class="card mt-4">
+            <img class="card-img-top img-fluid" src={{movie.image}} alt="">
+            <div class="card-body">
+              <h3 class="card-title">{{movie.name}}</h3>
+              <p class="card-text">{{movie.description}}</p>
+              <h5 class="card-text">{{movie.rating}}/10</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

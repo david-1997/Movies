@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let movie of movieData">
+            <div *ngIf="movie.category == name">
+                <div class="card h-100">
+                    <a [routerLink]="['/movie',movie._id]"><img class="card-img-top" src={{movie.image}} alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a [routerLink]="['/movie',movie._id]">{{movie.name}}</a>
+                        </h4>
+                        <h5>{{movie.rating}}/10</h5>
+                        <p class="card-text">{{movie.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

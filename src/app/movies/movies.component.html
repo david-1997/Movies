@@ -1,0 +1,10 @@
+<div class="card h-100">
+    <a [routerLink]="['/movie',movieData._id]"><img class="card-img-top" src={{movieData.image}} alt=""></a>
+    <div class="card-body">
+      <h4 class="card-title">
+        <a [routerLink]="['/movie',movieData._id]">{{movieData.name}}</a>
+      </h4>
+      <h5>{{movieData.rating}}/10</h5>
+      <p class="card-text">{{movieData.description}}</p>
+    </div>
+  </div>
