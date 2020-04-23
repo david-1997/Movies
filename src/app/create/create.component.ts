@@ -25,14 +25,10 @@ export class CreateComponent implements OnInit {
 
   sendData() {
     if (this.userForm.valid) {
-      console.log(this.userForm.value)
       this.movieService.postMovie(this.userForm.value).subscribe((movieData) => {
         console.log("Done")
         this.router.navigate(['/']);
       })
-    }
-    else {
-      console.log(this.userForm.value)
     }
   }
 }
