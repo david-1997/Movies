@@ -10,7 +10,7 @@ export class MovieService {
     return this.http.post('https://movies-nodejs.herokuapp.com/create', data)
   }
   getMovies(): Observable<any> {
-    return this.http.get('https://movies-nodejs.herokuapp.com/moviess')
+    return this.http.get('https://movies-nodejs.herokuapp.com/movies')
   }
   getCategory(name): Observable<any> {
     return this.http.get('https://movies-nodejs.herokuapp.com/category/'+name)
