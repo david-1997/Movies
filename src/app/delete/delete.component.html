@@ -3,7 +3,7 @@
         <div class="col-lg-3">
             <label for="">Choose a movie</label>
             <select formControlName="select" class="form-control" [(ngModel)]="selectedMovie" (change)="check()">
-                <option value="" disabled selected></option>
+                <option value="Choose a movie" disabled selected></option>
                 <option *ngFor="let movie of movieData" [ngValue]="movie">{{movie.name}}</option>
             </select>
         </div>
