@@ -7,18 +7,18 @@ import { Observable } from 'rxjs'
 export class MovieService {
   constructor(private http: HttpClient) { }
   postMovie(data): Observable<any> {
-    return this.http.post('https://movies-nodejs.herokuapp.com/create', data)
+    return this.http.post('https://movies-server-production-9c6f.up.railway.app/create', data)
   }
   getMovies(): Observable<any> {
-    return this.http.get('https://movies-nodejs.herokuapp.com/movies')
+    return this.http.get('https://movies-server-production-9c6f.up.railway.app/movies')
   }
   getCategory(name): Observable<any> {
-    return this.http.get('https://movies-nodejs.herokuapp.com/category/'+name)
+    return this.http.get('https://movies-server-production-9c6f.up.railway.app/category/'+name)
   }
   updateMovie(data): Observable<any> {
-    return this.http.put('https://movies-nodejs.herokuapp.com/update',data)
+    return this.http.put('https://movies-server-production-9c6f.up.railway.app/update',data)
   }
   deleteMovie(data): Observable<any> {
-    return this.http.delete('https://movies-nodejs.herokuapp.com/delete/'+data._id)
+    return this.http.delete('https://movies-server-production-9c6f.up.railway.app/delete/'+data._id)
   }
 }
